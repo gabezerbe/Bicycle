@@ -3,6 +3,7 @@
 namespace App\Command;
 
 use App\Service\Bicycle;
+use App\Service\Wheels;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -55,7 +56,17 @@ class RideBicycle extends Command
         ]);
 
         $output->writeln([
-            'What a ride!'
+            'What a ride!',
+            'Lets swap out the wheels!'
+        ]);
+
+        $bike->setWheels(new Wheels('Stainless Steel', true, 43));
+
+        $output->writeln([
+            'Alright! Lets check these bad boys out!',
+            'Size: ' . $bike->getWheels()->getTireSize(),
+            'Material: ' . $bike->getWheels()->getMaterial(),
+            'Tubeless: ' . $bike->getWheels()->getTubeless(),
         ]);
 
         return Command::SUCCESS;
