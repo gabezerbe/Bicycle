@@ -18,4 +18,36 @@ class Frame
         $this->maxMilTravel = $maxMilTravel;
 
     }
+
+    public function setFrameType(string $type){
+        $this->type = $type;
+    }
+
+    public function getFrameType(){
+        return $this->type;
+    }
+
+    public function setFork(string $fork){
+        $this->fork = $fork;
+    }
+
+    public function getFork(){
+        return $this->fork;
+    }
+
+    public function setShock(string $shock){
+        $this->shock = $shock;
+    }
+
+    public function getShock(){
+        return $this->shock;
+    }
+
+    public function setMaxMilTravel(int $maxMilTravel){
+        $this->maxMilTravel = $maxMilTravel;
+    }
+
+    public function getMaxMilTravel(){
+        return $this->maxMilTravel;
+    }
 }

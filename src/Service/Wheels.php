@@ -8,7 +8,7 @@ class Wheels
     private bool $tubeless;
     private int $tireSize;
 
-    public function __construct(string $material, bool $tubeless = false, int $tireSize){
+    public function __construct(string $material = "Aluminum", bool $tubeless = false, int $tireSize = 29){
         $this->material = $material;
         $this->tubeless = $tubeless;
         $this->tireSize = $tireSize;
