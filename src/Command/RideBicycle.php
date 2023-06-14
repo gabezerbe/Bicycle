@@ -47,6 +47,17 @@ class RideBicycle extends Command
                 'This thing will go really fast!']
         );
 
+        $output->writeln([
+            'Lets take it for a ride!',
+            $bike->peddleBike(15),
+            $bike->peddleBike(-5),
+            $bike->peddleBike(0)
+        ]);
+
+        $output->writeln([
+            'What a ride!'
+        ]);
+
         return Command::SUCCESS;
     }
 }
